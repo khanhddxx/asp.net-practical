@@ -1,0 +1,16 @@
+﻿
+namespace eLink.BookingVcmReport {
+    
+    @Serenity.Decorators.registerClass()
+    export class CssVcmDanhSachPoGrid extends Serenity.EntityGrid<CssVcmDanhSachPoRow, any> {
+        protected getColumnsKey() { return 'BookingVcmReport.CssVcmDanhSachPo'; }
+        protected getDialogType() { return CssVcmDanhSachPoDialog; }
+        protected getIdProperty() { return CssVcmDanhSachPoRow.idProperty; }
+        protected getLocalTextPrefix() { return CssVcmDanhSachPoRow.localTextPrefix; }
+        protected getService() { return CssVcmDanhSachPoService.baseUrl; }
+
+        constructor(container: JQuery) {
+            super(container);
+        }
+    }
+}

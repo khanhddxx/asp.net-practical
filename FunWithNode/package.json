@@ -1,0 +1,13 @@
+{
+  "name": "fun-with-node",
+  "version": "0.0.0",
+  "description": "FunWithNode",
+  "main": "app.js",
+  "author": {
+    "name": "Khanh Do"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "underscore": "^1.8.3"
+  }
+}

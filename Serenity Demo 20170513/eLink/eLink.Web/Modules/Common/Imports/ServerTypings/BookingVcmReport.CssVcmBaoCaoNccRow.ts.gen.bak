@@ -1,0 +1,23 @@
+﻿
+namespace eLink.BookingVcmReport {
+    export interface CssVcmBaoCaoNccRow {
+        Id?: number;
+        Vendor?: string;
+        VendorSupplyingSite?: string;
+    }
+
+    export namespace CssVcmBaoCaoNccRow {
+        export const idProperty = 'Id';
+        export const nameProperty = 'Vendor';
+        export const localTextPrefix = 'BookingVcmReport.CssVcmBaoCaoNcc';
+
+        export namespace Fields {
+            export declare const Id;
+            export declare const Vendor;
+            export declare const VendorSupplyingSite;
+        }
+
+        ['Id', 'Vendor', 'VendorSupplyingSite'].forEach(x => (<any>Fields)[x] = x);
+    }
+}
+

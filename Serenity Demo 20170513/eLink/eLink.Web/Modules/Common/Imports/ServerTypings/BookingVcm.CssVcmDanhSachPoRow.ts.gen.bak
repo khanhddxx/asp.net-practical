@@ -1,0 +1,47 @@
+﻿
+namespace eLink.BookingVcm {
+    export interface CssVcmDanhSachPoRow {
+        Id?: number;
+        MaPo?: string;
+        NgayGiao?: string;
+        Vendor?: string;
+        VendorSupplyingSite?: string;
+        GhiChu?: string;
+        InsertDate?: string;
+        InsertTime?: string;
+        InsertUser?: string;
+        InsertUserName?: string;
+        UpdateDate?: string;
+        UpdateTime?: string;
+        UpdateUser?: string;
+        UpdateUserName?: string;
+        TrangThai?: string;
+    }
+
+    export namespace CssVcmDanhSachPoRow {
+        export const idProperty = 'Id';
+        export const nameProperty = 'MaPo';
+        export const localTextPrefix = 'BookingVcm.CssVcmDanhSachPo';
+
+        export namespace Fields {
+            export declare const Id;
+            export declare const MaPo;
+            export declare const NgayGiao;
+            export declare const Vendor;
+            export declare const VendorSupplyingSite;
+            export declare const GhiChu;
+            export declare const InsertDate;
+            export declare const InsertTime;
+            export declare const InsertUser;
+            export declare const InsertUserName;
+            export declare const UpdateDate;
+            export declare const UpdateTime;
+            export declare const UpdateUser;
+            export declare const UpdateUserName;
+            export declare const TrangThai;
+        }
+
+        ['Id', 'MaPo', 'NgayGiao', 'Vendor', 'VendorSupplyingSite', 'GhiChu', 'InsertDate', 'InsertTime', 'InsertUser', 'InsertUserName', 'UpdateDate', 'UpdateTime', 'UpdateUser', 'UpdateUserName', 'TrangThai'].forEach(x => (<any>Fields)[x] = x);
+    }
+}
+

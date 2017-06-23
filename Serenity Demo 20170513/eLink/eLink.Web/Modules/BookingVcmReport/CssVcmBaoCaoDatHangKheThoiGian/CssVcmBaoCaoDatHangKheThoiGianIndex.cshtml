@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = Serenity.LocalText.Get("Db.BookingVcmReport.CssVcmBaoCaoDatHangKheThoiGian.EntityPlural");
+}
+
+<div id="GridDiv"></div>
+
+<script type="text/javascript">
+    jQuery(function () {
+        new eLink.BookingVcmReport.CssVcmBaoCaoDatHangKheThoiGianGrid($('#GridDiv'), {}).init();
+
+        Q.initFullHeightGridPage($('#GridDiv'));
+    });
+</script>
+

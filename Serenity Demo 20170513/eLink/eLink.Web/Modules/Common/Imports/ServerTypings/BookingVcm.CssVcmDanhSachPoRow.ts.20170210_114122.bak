@@ -1,0 +1,48 @@
+﻿namespace eLink.BookingVcm {
+    export interface CssVcmDanhSachPoRow {
+        Id?: number;
+        IdOder?: number;
+        MaPo?: string;
+        NgayGiao?: string;
+        GioGiao?: string;
+        MoTa?: string;
+        MaHang?: string;
+        TenHang?: string;
+        SoLuong?: number;
+        InsertDate?: string;
+        InsertTime?: string;
+        InsertUser?: string;
+        UpdateDate?: string;
+        UpdateTime?: string;
+        UpdateUser?: string;
+        DetailList?: CssVcmDanhSachPoRow[];
+    }
+
+    export namespace CssVcmDanhSachPoRow {
+        export const idProperty = 'Id';
+        export const nameProperty = 'MaPo';
+        export const localTextPrefix = 'BookingVcm.CssVcmDanhSachPo';
+
+        export namespace Fields {
+            export declare const Id: string;
+            export declare const IdOder: string;
+            export declare const MaPo: string;
+            export declare const NgayGiao: string;
+            export declare const GioGiao: string;
+            export declare const MoTa: string;
+            export declare const MaHang: string;
+            export declare const TenHang: string;
+            export declare const SoLuong: string;
+            export declare const InsertDate: string;
+            export declare const InsertTime: string;
+            export declare const InsertUser: string;
+            export declare const UpdateDate: string;
+            export declare const UpdateTime: string;
+            export declare const UpdateUser: string;
+            export declare const DetailList: string;
+        }
+
+        ['Id', 'IdOder', 'MaPo', 'NgayGiao', 'GioGiao', 'MoTa', 'MaHang', 'TenHang', 'SoLuong', 'InsertDate', 'InsertTime', 'InsertUser', 'UpdateDate', 'UpdateTime', 'UpdateUser', 'DetailList'].forEach(x => (<any>Fields)[x] = x);
+    }
+}
+

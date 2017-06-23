@@ -1,0 +1,36 @@
+﻿
+namespace eLink.BookingVcmReport {
+
+  @Serenity.Decorators.registerClass()
+  export class CssVcmDanhSachPoGrid extends Serenity.EntityGrid<CssVcmDanhSachPoRow, any> {
+    protected getColumnsKey() { return 'BookingVcmReport.CssVcmDanhSachPo'; }
+    protected getDialogType() { return <any>CssVcmDanhSachPoDialog; }
+    protected getIdProperty() { return CssVcmDanhSachPoRow.idProperty; }
+    protected getLocalTextPrefix() { return CssVcmDanhSachPoRow.localTextPrefix; }
+    protected getService() { return CssVcmDanhSachPoService.baseUrl; }
+
+    constructor(container: JQuery) {
+      super(container);
+    }
+
+    protected getButtons(): Serenity.ToolButton[] {
+      // call base method to get list of buttons
+      var buttons = [];
+      // add our import button
+      buttons.push({
+        title: 'Import From Excel',
+        cssClass: 'export-xlsx-button',
+        onClick: () => {
+          // open import dialog, let it handle rest
+          var dialog = new POExcelImportDialog();
+          dialog.element.on('dialogclose', () => {
+            this.refresh();
+            dialog = null;
+          });
+          dialog.dialogOpen();
+        }
+      });
+      return buttons;
+    }
+  }
+}
